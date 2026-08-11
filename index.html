@@ -49,9 +49,9 @@
                 
                 <nav class="hidden md:flex space-x-8 font-semibold text-sm text-gray-700">
                     <a href="#inicio" class="hover:text-magenta transition duration-200">Início</a>
-                    <a href="#menu-semanal" class="hover:text-magenta transition duration-200">Menú Semanal</a>
                     <a href="#promocoes" class="hover:text-magenta transition duration-200 text-magenta font-bold">Promoções</a>
                     <a href="#cardapio" class="hover:text-magenta transition duration-200">Cardápio</a>
+                    <a href="#menu-semanal" class="hover:text-magenta transition duration-200">Menú Semanal</a>
                     <a href="#galeria" class="hover:text-magenta transition duration-200">Galeria</a>
                     <a href="#calculadora" class="hover:text-magenta transition duration-200">Calculadora</a>
                     <a href="#contacto-secao" class="hover:text-magenta transition duration-200">Contacto</a>
@@ -79,8 +79,8 @@
                     Bolos de aniversário, massas folhadas crocantes, salgados por dúzia e pratos executivos diários preparados com todo carinho.
                 </p>
                 <div class="pt-3 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                    <a href="#menu-semanal" class="bg-white hover:bg-magenta-light text-magenta font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-calendar-days"></i> Ver Menú Semanal
+                    <a href="#promocoes" class="bg-white hover:bg-magenta-light text-magenta font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-fire"></i> Ver Promoções
                     </a>
                     <a href="#cardapio" class="bg-amber-400 hover:bg-amber-500 text-gray-900 font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
                         Ver Cardápio Geral <i class="fa-solid fa-arrow-down"></i>
@@ -90,7 +90,112 @@
         </div>
     </section>
 
-    <!-- SEÇÃO MENÚ SEMANAL -->
+    <!-- 1º SEÇÃO: PROMOÇÕES / OFERTAS ESPECIAS -->
+    <section id="promocoes" class="bg-gradient-to-b from-magenta-light to-white py-12 border-b border-magenta-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-2 mb-8">
+                <span class="bg-magenta text-white text-[10px] sm:text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm inline-block">
+                    <i class="fa-solid fa-tags mr-1"></i> Ofertas Especiais
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-magenta tracking-tight">Especiais de Massa Folhada</h2>
+                <p class="text-gray-600 text-xs sm:text-sm">Aproveite nossas folhadas imperdíveis em promoção especial</p>
+                <div class="w-16 h-1 bg-magenta mx-auto rounded-full mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="lista-promocoes">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border-2 border-magenta transition-all duration-300 flex flex-col justify-between relative group transform hover:-translate-y-1">
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider z-20 shadow-md flex items-center gap-1">
+                        <i class="fa-solid fa-fire"></i> Destaque da Casa
+                    </div>
+                    <div>
+                        <div class="relative overflow-hidden aspect-[16/9] bg-gray-100 group/img">
+                            <img id="img-promo-1" src="imagens/massafolhada.jpeg" onerror="tratarErroImagem(this)" onclick="abrirZoom(this.src)" alt="Massa Folhada" class="w-full h-full object-cover img-fade cursor-zoom-in">
+                            <button onclick="mudarFotoPromo(1, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button onclick="mudarFotoPromo(1, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <div id="dots-promo-1" class="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-20"></div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-magenta transition-colors">Massa Folhada</h3>
+                            <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Salgados folhados levemente dourados, crocantes e artesanais com recheios irresistíveis.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-2">
+                        <div>
+                            <span class="text-xs text-gray-400 line-through block">160 Mt</span>
+                            <span class="text-2xl font-extrabold text-magenta">135 Mt</span>
+                        </div>
+                        <button onclick="adicionarPromoAoCarrinho('Massa Folhada', 135, 'Promocional Destaque')" class="bg-magenta hover:bg-magenta-dark text-white px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition duration-300 flex items-center gap-2 shadow-md">
+                            <i class="fa-solid fa-cart-plus"></i> Aproveitar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border-2 border-magenta/20 transition-all duration-300 flex flex-col justify-between relative group transform hover:-translate-y-1">
+                    <div class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider z-20 shadow-md">
+                        Crocância Extra
+                    </div>
+                    <div>
+                        <div class="relative overflow-hidden aspect-[16/9] bg-gray-100 group/img">
+                            <img id="img-promo-2" src="imagens/massafolhadatorada1.jpeg" onerror="tratarErroImagem(this)" onclick="abrirZoom(this.src)" alt="Massa Folhada Torrada" class="w-full h-full object-cover img-fade cursor-zoom-in">
+                            <button onclick="mudarFotoPromo(2, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button onclick="mudarFotoPromo(2, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <div id="dots-promo-2" class="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-20"></div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-magenta transition-colors">Massa Folhada Torrada</h3>
+                            <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Assada no ponto perfeito com acabamento bem torrado e dourado para extra crocância.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-2">
+                        <div>
+                            <span class="text-xs text-gray-400 line-through block">200 Mt</span>
+                            <span class="text-2xl font-extrabold text-magenta">160 Mt</span>
+                        </div>
+                        <button onclick="adicionarPromoAoCarrinho('Massa Folhada Torrada', 135, 'Promocional Torrada Extra')" class="bg-magenta hover:bg-magenta-dark text-white px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition duration-300 flex items-center gap-2 shadow-md">
+                            <i class="fa-solid fa-cart-plus"></i> Aproveitar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2º SEÇÃO: CARDÁPIO GERAL -->
+    <section id="cardapio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center space-y-2 mb-8">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-magenta tracking-tight">Nosso Cardápio Geral</h2>
+            <p class="text-gray-500 text-xs sm:text-sm">Escolha seus produtos e personalize os tamanhos e recheios</p>
+            <div class="w-16 h-1 bg-magenta mx-auto rounded-full mt-2"></div>
+        </div>
+
+        <div class="max-w-lg mx-auto mb-6">
+            <div class="relative flex items-center bg-white shadow-sm border border-gray-200 rounded-2xl overflow-hidden focus-within:border-magenta focus-within:ring-2 focus-within:ring-magenta/20 transition-all">
+                <span class="pl-4 text-gray-400"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" id="campo-busca" oninput="filtrarProdutos()" placeholder="Buscar bolo, massa folhada, caril..." class="w-full pl-3 pr-4 py-3 text-sm bg-transparent outline-none text-gray-700">
+            </div>
+        </div>
+
+        <div class="w-full border-b border-gray-200 mb-8 overflow-hidden">
+            <div class="flex space-x-2 overflow-x-auto pb-3 scroll-clean justify-start md:justify-center" id="container-categorias">
+                <button onclick="filtrarCategoria('todos', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-bold bg-magenta text-white text-xs sm:text-sm transition shadow-sm">Todos</button>
+                <button onclick="filtrarCategoria('salgados', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-medium text-gray-500 hover:text-magenta text-xs sm:text-sm transition">Salgados</button>
+                <button onclick="filtrarCategoria('bolos', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-medium text-gray-500 hover:text-magenta text-xs sm:text-sm transition">Bolos</button>
+                <button onclick="filtrarCategoria('sobremesas', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-medium text-gray-500 hover:text-magenta text-xs sm:text-sm transition">Sobremesas</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="lista-produtos"></div>
+    </section>
+
+    <!-- 3º SEÇÃO: MENÚ SEMANAL -->
     <section id="menu-semanal" class="bg-white py-12 border-b border-magenta-soft">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center space-y-2 mb-10">
@@ -281,111 +386,6 @@
 
             </div>
         </div>
-    </section>
-
-    <!-- SEÇÃO PROMOÇÕES -->
-    <section id="promocoes" class="bg-gradient-to-b from-magenta-light to-white py-12 border-b border-magenta-soft">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center space-y-2 mb-8">
-                <span class="bg-magenta text-white text-[10px] sm:text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm inline-block">
-                    <i class="fa-solid fa-tags mr-1"></i> Ofertas Especiais
-                </span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-magenta tracking-tight">Especiais de Massa Folhada</h2>
-                <p class="text-gray-600 text-xs sm:text-sm">Aproveite nossas folhadas imperdíveis em promoção especial</p>
-                <div class="w-16 h-1 bg-magenta mx-auto rounded-full mt-2"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="lista-promocoes">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border-2 border-magenta transition-all duration-300 flex flex-col justify-between relative group transform hover:-translate-y-1">
-                    <div class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider z-20 shadow-md flex items-center gap-1">
-                        <i class="fa-solid fa-fire"></i> Destaque da Casa
-                    </div>
-                    <div>
-                        <div class="relative overflow-hidden aspect-[16/9] bg-gray-100 group/img">
-                            <img id="img-promo-1" src="imagens/massafolhada.jpeg" onerror="tratarErroImagem(this)" onclick="abrirZoom(this.src)" alt="Massa Folhada" class="w-full h-full object-cover img-fade cursor-zoom-in">
-                            <button onclick="mudarFotoPromo(1, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-                            <button onclick="mudarFotoPromo(1, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                            <div id="dots-promo-1" class="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-20"></div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-magenta transition-colors">Massa Folhada</h3>
-                            <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Salgados folhados levemente dourados, crocantes e artesanais com recheios irresistíveis.</p>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-2">
-                        <div>
-                            <span class="text-xs text-gray-400 line-through block">160 Mt</span>
-                            <span class="text-2xl font-extrabold text-magenta">135 Mt</span>
-                        </div>
-                        <button onclick="adicionarPromoAoCarrinho('Massa Folhada', 135, 'Promocional Destaque')" class="bg-magenta hover:bg-magenta-dark text-white px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition duration-300 flex items-center gap-2 shadow-md">
-                            <i class="fa-solid fa-cart-plus"></i> Aproveitar
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border-2 border-magenta/20 transition-all duration-300 flex flex-col justify-between relative group transform hover:-translate-y-1">
-                    <div class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider z-20 shadow-md">
-                        Crocância Extra
-                    </div>
-                    <div>
-                        <div class="relative overflow-hidden aspect-[16/9] bg-gray-100 group/img">
-                            <img id="img-promo-2" src="imagens/massafolhadatorada1.jpeg" onerror="tratarErroImagem(this)" onclick="abrirZoom(this.src)" alt="Massa Folhada Torrada" class="w-full h-full object-cover img-fade cursor-zoom-in">
-                            <button onclick="mudarFotoPromo(2, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-                            <button onclick="mudarFotoPromo(2, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                            <div id="dots-promo-2" class="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-20"></div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-magenta transition-colors">Massa Folhada Torrada</h3>
-                            <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Assada no ponto perfeito com acabamento bem torrado e dourado para extra crocância.</p>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-2">
-                        <div>
-                            <span class="text-xs text-gray-400 line-through block">200 Mt</span>
-                            <span class="text-2xl font-extrabold text-magenta">160 Mt</span>
-                        </div>
-                        <button onclick="adicionarPromoAoCarrinho('Massa Folhada Torrada', 135, 'Promocional Torrada Extra')" class="bg-magenta hover:bg-magenta-dark text-white px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition duration-300 flex items-center gap-2 shadow-md">
-                            <i class="fa-solid fa-cart-plus"></i> Aproveitar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CARDÁPIO SECTION -->
-    <section id="cardapio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="text-center space-y-2 mb-8">
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-magenta tracking-tight">Nosso Cardápio Geral</h2>
-            <p class="text-gray-500 text-xs sm:text-sm">Escolha seus produtos e personalize os tamanhos e recheios</p>
-            <div class="w-16 h-1 bg-magenta mx-auto rounded-full mt-2"></div>
-        </div>
-
-        <div class="max-w-lg mx-auto mb-6">
-            <div class="relative flex items-center bg-white shadow-sm border border-gray-200 rounded-2xl overflow-hidden focus-within:border-magenta focus-within:ring-2 focus-within:ring-magenta/20 transition-all">
-                <span class="pl-4 text-gray-400"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" id="campo-busca" oninput="filtrarProdutos()" placeholder="Buscar bolo, massa folhada, caril..." class="w-full pl-3 pr-4 py-3 text-sm bg-transparent outline-none text-gray-700">
-            </div>
-        </div>
-
-        <div class="w-full border-b border-gray-200 mb-8 overflow-hidden">
-            <div class="flex space-x-2 overflow-x-auto pb-3 scroll-clean justify-start md:justify-center" id="container-categorias">
-                <button onclick="filtrarCategoria('todos', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-bold bg-magenta text-white text-xs sm:text-sm transition shadow-sm">Todos</button>
-                <button onclick="filtrarCategoria('salgados', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-medium text-gray-500 hover:text-magenta text-xs sm:text-sm transition">Salgados</button>
-                <button onclick="filtrarCategoria('bolos', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-medium text-gray-500 hover:text-magenta text-xs sm:text-sm transition">Bolos</button>
-                <button onclick="filtrarCategoria('sobremesas', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-medium text-gray-500 hover:text-magenta text-xs sm:text-sm transition">Sobremesas</button>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="lista-produtos"></div>
     </section>
 
     <!-- GALERIA DE FOTOS -->
@@ -698,6 +698,16 @@
         </div>
     </div>
 
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP (AJUDA E SUPORTE DO SITE) -->
+    <a href="https://wa.me/258845548352?text=Ol%C3%A1!%20Estou%20no%20site%20da%20Fino%20Sabor%20e%20gostaria%20de%20ajuda%20para%20entender%20como%20fazer%20o%20meu%20pedido." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3.5 md:px-5 md:py-3 rounded-full shadow-2xl transition-all duration-300 flex items-center gap-2 group hover:scale-105 active:scale-95 border-2 border-white"
+       aria-label="Ajuda no WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl md:text-2xl"></i>
+        <span class="hidden md:inline font-bold text-xs uppercase tracking-wider">Precisa de ajuda?</span>
+    </a>
+
     <!-- BARRA DE MENU FLUTUANTE (MOBILE NAVIGATION BAR) -->
     <nav class="fixed bottom-3 left-4 right-4 z-40 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl border border-magenta-soft p-1.5 md:hidden">
         <div class="flex justify-around items-center">
@@ -705,17 +715,17 @@
                 <i class="fa-solid fa-house text-base"></i>
                 <span class="text-[10px] font-semibold mt-0.5">Início</span>
             </a>
-            <a href="#menu-semanal" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
-                <i class="fa-solid fa-calendar-days text-base text-magenta"></i>
-                <span class="text-[10px] font-semibold mt-0.5">Menú</span>
+            <a href="#promocoes" class="flex flex-col items-center py-1 px-2 text-magenta font-bold transition text-center">
+                <i class="fa-solid fa-tags text-base"></i>
+                <span class="text-[10px] font-semibold mt-0.5">Promoções</span>
             </a>
             <a href="#cardapio" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
                 <i class="fa-solid fa-utensils text-base"></i>
                 <span class="text-[10px] font-semibold mt-0.5">Cardápio</span>
             </a>
-            <a href="#contacto-secao" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
-                <i class="fa-solid fa-address-book text-base"></i>
-                <span class="text-[10px] font-semibold mt-0.5">Contacto</span>
+            <a href="#menu-semanal" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
+                <i class="fa-solid fa-calendar-days text-base"></i>
+                <span class="text-[10px] font-semibold mt-0.5">Menú</span>
             </a>
             <button onclick="toggleCarrinho()" class="relative flex flex-col items-center py-1 px-2 text-magenta font-bold transition text-center">
                 <i class="fa-solid fa-basket-shopping text-base"></i>
