@@ -226,8 +226,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.98);
     z-index: 1000;
     box-shadow: var(--shadow-sm);
     padding: 0.8rem 0;
@@ -814,21 +813,23 @@ img {
 .bg-gold { background-color: var(--color-gold-primary); }
 .bg-dark { background-color: var(--color-dark); }
 
-/* 12. SACOLA DE COMPRAS (DRAWER SLIDE-IN)
+/* 12. SACOLA DE COMPRAS (DRAWER SLIDE-IN CORRIGIDO PARA MOBILE)
    -------------------------------------------------------------------------- */
 .cart-drawer {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2000;
+    z-index: 99999;
     visibility: hidden;
+    pointer-events: none;
     transition: visibility 0.3s ease;
 }
 
 .cart-drawer.active {
     visibility: visible;
+    pointer-events: auto;
 }
 
 .cart-drawer-overlay {
@@ -837,7 +838,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -850,7 +851,7 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 85%;
     max-width: 420px;
     height: 100%;
     background: var(--color-white);
@@ -858,7 +859,8 @@ img {
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+    box-shadow: -5px 0 25px rgba(0,0,0,0.25);
+    z-index: 100000;
 }
 
 .cart-drawer.active .cart-drawer-content {
