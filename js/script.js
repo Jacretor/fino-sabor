@@ -7,8 +7,8 @@ const produtosAginaSabores = [
         descricao: "Porção com 12 unidades de chamuças crocantes e bem recheadas.",
         precoBase: 350,
         imagens: [
-            "imagens/chamu.jpg",
-            "imagens/Chamucasdebatata.jpg"
+            "imagens/Ch1.jpeg",
+            "imagens/ch2.jpeg"
         ],
         opcoes: {
             recheios: [
