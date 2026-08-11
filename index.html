@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fino Sabor | Catering & Pastelaria de Alto Padrão em Matola</title>
+    <meta name="description" content="Especialistas em serviços de catering, bolos de aniversário e salgados por dúzia na Matola e Maputo. Encomende online 24 horas.">
+    
+    <!-- Open Graph / SEO Local -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fino Sabor | Catering & Pastelaria">
+    <meta property="og:description" content="Sabores que encantam e transformam os seus eventos. Faça a sua encomenda online.">
+
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header class="site-header" id="header">
+        <div class="container header-container">
+            <a href="#inicio" class="brand-logo">
+                <!-- Logotipo Oficial da Fino Sabor -->
+                <img src="imagens/logo.jpeg" alt="Fino Sabor Logo" class="logo-img">
+                <div class="logo-text-group">
+                    <span class="logo-text">FINO SABOR</span>
+                    <span class="logo-sub font-gold">CATERING & PASTELARIA</span>
+                </div>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Navegação Principal">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#cardapio" class="nav-link">Cardápio Digital</a></li>
+                    <li><a href="#calculadora" class="nav-link font-gold"><i class="fa-solid fa-calculator"></i> Simular Evento</a></li>
+                    <li><a href="#catering" class="nav-link">Serviços de Catering</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#contactos" class="nav-link">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-trigger-btn" id="openCartBtn" aria-label="Ver Sacola">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cartBadge">0</span>
+                </button>
+                <a href="#cardapio" class="btn btn-magenta btn-sm hide-mobile"><i class="fa-brands fa-whatsapp"></i> Fazer Encomenda</a>
+                <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-list">
+                    <li><a href="#inicio" class="mobile-link">Início</a></li>
+                    <li><a href="#cardapio" class="mobile-link">Cardápio Digital</a></li>
+                    <li><a href="#calculadora" class="mobile-link font-gold"><i class="fa-solid fa-calculator"></i> Simular Evento</a></li>
+                    <li><a href="#catering" class="mobile-link">Serviços de Catering</a></li>
+                    <li><a href="#sobre" class="mobile-link">Sobre Nós</a></li>
+                    <li><a href="#contactos" class="mobile-link">Contactos</a></li>
+                </ul>
+                <div class="mobile-nav-footer">
+                    <a href="#cardapio" class="btn btn-magenta w-full text-center">Ver Cardápio & Encomendar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION COM IMAGEM REAL -->
+        <section id="inicio" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge-magenta"><i class="fa-solid fa-clock"></i> Atendimento & Encomendas 24 Horas</span>
+                    <h1 class="hero-title">Sabores que <span class="text-magenta">encantam</span> e transformam o seu evento</h1>
+                    <p class="hero-subtitle">Especialistas em serviços de catering, bolos de aniversário artísticos e salgados finos por dúzia na Matola e Maputo.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#cardapio" class="btn btn-magenta"><i class="fa-solid fa-utensils"></i> Ver Cardápio Completo</a>
+                        <a href="#calculadora" class="btn btn-outline-gold"><i class="fa-solid fa-calculator"></i> Calculadora de Eventos</a>
+                    </div>
+
+                    <div class="quick-features mt-lg">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-location-dot font-magenta"></i>
+                            <span>Matola, Moçambique</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-star font-gold"></i>
+                            <span>Pastelaria & Catering Fino</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="magenta-frame">
+                        <div class="hero-card-display">
+                            <!-- Foto do Bolo / Catering em Destaque -->
+                            <img src="imagens/bolosalgado.jpeg" alt="Bolo e Sobremesas Fino Sabor" class="hero-img">
+                            <div class="hero-badge-float">
+                                <i class="fa-solid fa-cake-candles font-gold"></i>
+                                <div>
+                                    <strong>Bolos & Salgados</strong>
+                                    <small>Para festas inesquecíveis</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARDÁPIO DIGITAL COM ABAS E FOTOS POR PRODUTO -->
+        <section id="cardapio" class="section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag font-magenta">Nosso Menu Exclusivo</span>
+                    <h2 class="section-title">Cardápio & Preços</h2>
+                    <p class="text-muted">Selecione os seus itens e adicione à sacola para enviar o pedido direto pelo WhatsApp.</p>
+                </div>
+
+                <!-- FILTROS POR TABS -->
+                <div class="catalog-tabs" id="catalogTabs">
+                    <button class="tab-btn active" data-filter="todos">Todos os Produtos</button>
+                    <button class="tab-btn" data-filter="salgados">🥐 Salgados (por dúzia)</button>
+                    <button class="tab-btn" data-filter="bolos">🎂 Bolos de Aniversário</button>
+                    <button class="tab-btn" data-filter="sobremesas">🍮 Sobremesas (por dúzia)</button>
+                </div>
+
+                <div class="products-grid" id="productsContainer">
+                    <!-- Inserido dinamicamente via JS com Fotos dos Produtos -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULADORA DE EVENTOS -->
+        <section id="calculadora" class="section">
+            <div class="container">
+                <div class="calculator-wrapper">
+                    <div class="section-header text-center">
+                        <span class="section-tag font-gold">Simulador Rápido</span>
+                        <h2 class="section-title">Calculadora de Eventos</h2>
+                        <p class="text-muted">Não sabe quanto encomendar? Insira a quantidade de convidados para receber uma estimativa recomendada.</p>
+                    </div>
+
+                    <form id="calculatorForm" onsubmit="calculateEventNeeds(event)" class="calculator-form">
+                        <div class="calc-grid">
+                            <div class="form-group">
+                                <label for="calcGuests"><i class="fa-solid fa-users"></i> Número de Convidados *</label>
+                                <input type="number" id="calcGuests" min="5" placeholder="Ex: 50" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="calcEventType"><i class="fa-solid fa-champagne-glasses"></i> Tipo de Evento *</label>
+                                <select id="calcEventType" required>
+                                    <option value="Aniversário">Aniversário</option>
+                                    <option value="Casamento">Casamento / Baptizado</option>
+                                    <option value="Corporativo">Evento Corporativo / Coffee Break</option>
+                                    <option value="Festa Infantil">Festa Infantil</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-md">
+                            <button type="submit" class="btn btn-gold"><i class="fa-solid fa-wand-magic-sparkles"></i> Calcular Recomendação</button>
+                        </div>
+                    </form>
+
+                    <div id="calcResult" class="calc-result-box d-none mt-lg">
+                        <h3><i class="fa-solid fa-clipboard-check font-magenta"></i> Recomendação Fino Sabor:</h3>
+                        <div class="calc-details-grid mt-sm">
+                            <div class="calc-res-item">
+                                <strong>🥐 Salgados Sugeridos:</strong>
+                                <span id="resSalgados">0 dúzias</span>
+                            </div>
+                            <div class="calc-res-item">
+                                <strong>🎂 Bolo Sugerido:</strong>
+                                <span id="resBolo">Tamanho F20</span>
+                            </div>
+                            <div class="calc-res-item">
+                                <strong>🍮 Sobremesas Sugeridas:</strong>
+                                <span id="resSobremesas">0 dúzias</span>
+                            </div>
+                        </div>
+                        <button onclick="sendCalcToWhatsapp()" class="btn btn-magenta w-full mt-md">
+                            <i class="fa-brands fa-whatsapp"></i> Enviar esta Estimativa para o WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS DE CATERING COM FOTO DE EVENTO REAL -->
+        <section id="catering" class="section bg-light">
+            <div class="container">
+                <div class="grid-2 gap-lg items-center">
+                    <div class="about-image-card">
+                        <div class="catering-img-box">
+                            <img src="images/catering-mesa.jpg" alt="Mesa de Catering Fino Sabor" class="catering-img">
+                        </div>
+                    </div>
+                    <div class="about-text-content">
+                        <span class="section-tag font-magenta">Atendimento Completo</span>
+                        <h2 class="section-title">Serviços de Catering e Consultoria para Eventos</h2>
+                        <p class="text-muted">Organizamos e montamos a mesa dos seus sonhos. Atendemos casamentos, aniversários, chás de bebê, baptizados e reuniões corporativas na Matola e arredores.</p>
+                        
+                        <ul class="catering-list mt-sm mb-md">
+                            <li><i class="fa-solid fa-circle-check font-magenta"></i> Mesas temáticas completas com salgados fritos e assados na hora.</li>
+                            <li><i class="fa-solid fa-circle-check font-magenta"></i> Bolos artísticos personalizados e mesas de doces sofisticadas.</li>
+                            <li><i class="fa-solid fa-circle-check font-magenta"></i> Atendimento personalizado e equipe dedicada.</li>
+                        </ul>
+
+                        <a href="https://wa.me/258845548352?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20de%20Catering%20para%20o%20meu%20evento." target="_blank" class="btn btn-magenta">
+                            <i class="fa-brands fa-whatsapp"></i> Solicitar Proposta de Catering
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE NÓS -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <div class="grid-2 gap-lg items-center">
+                    <div>
+                        <span class="section-tag font-gold">Tradição & Elegância</span>
+                        <h2 class="section-title">Sobre a Fino Sabor</h2>
+                        <p class="text-muted">A <strong>Fino Sabor</strong> é uma empresa especializada em catering, pastelaria artesanal e consultoria para festas e celebrações, sediada na Matola, Moçambique.</p>
+                        <p class="text-muted mt-sm">Nossa missão é entregar sabor autêntico, apresentação impecável e ingredientes frescos em cada detalhe do seu evento.</p>
+                    </div>
+                    <div class="stats-card-grid">
+                        <div class="stat-box">
+                            <strong class="font-magenta">24h</strong>
+                            <small>Vendas e Encomendas Online</small>
+                        </div>
+                        <div class="stat-box">
+                            <strong class="font-gold">100%</strong>
+                            <small>Produção Fresca & Dedicada</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVALIAÇÕES DE CLIENTES -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag font-magenta">Depoimentos</span>
+                    <h2 class="section-title">O que dizem os nossos clientes</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars font-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="testimonial-text">"As chamussas de caranguejo e o bolo de red velvet foram a atração do meu aniversário. Pontualidade exemplar na entrega na Matola!"</p>
+                        <strong>— Vanessa M.</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars font-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="testimonial-text">"Contratamos o serviço de catering para o baptizado da nossa filha. O Tiramisu e os rissóis estavam divinais. Recomendamos vivamente!"</p>
+                        <strong>— Celso & Amélia</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTOS & LOCALIZAÇÃO -->
+        <section id="contactos" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag font-gold">Atendimento Direto</span>
+                    <h2 class="section-title">Fale Connosco</h2>
+                </div>
+
+                <div class="contacts-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon bg-magenta"><i class="fa-brands fa-whatsapp"></i></div>
+                        <h3>WhatsApp / Tel</h3>
+                        <p>+258 84 554 8352</p>
+                        <a href="https://wa.me/258845548352" target="_blank" class="btn btn-outline-magenta btn-sm mt-sm">Conversar Agora</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon bg-gold"><i class="fa-solid fa-envelope"></i></div>
+                        <h3>E-mail</h3>
+                        <p>nissiarouca@gmail.com</p>
+                        <a href="mailto:nissiarouca@gmail.com" class="btn btn-outline-gold btn-sm mt-sm">Enviar E-mail</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon bg-dark"><i class="fa-brands fa-instagram"></i></div>
+                        <h3>Instagram</h3>
+                        <p>@finosabormz_oficial</p>
+                        <a href="https://instagram.com/finosabormz_oficial" target="_blank" class="btn btn-outline-dark btn-sm mt-sm">Ver Perfil</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SACOLA DE COMPRAS / DRAWER -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+        <div class="cart-drawer-content">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-bag-shopping font-magenta"></i> Minha Sacola de Encomendas</h3>
+                <button class="cart-close-btn" id="closeCartBtn">&times;</button>
+            </div>
+
+            <div class="cart-body" id="cartItemsContainer"></div>
+
+            <div class="cart-footer">
+                <div class="cart-summary mb-sm">
+                    <div class="summary-row total-row">
+                        <span>Total Estimado:</span>
+                        <strong id="cartTotal" class="font-magenta">0 MZN</strong>
+                    </div>
+                </div>
+
+                <div class="cart-notes mb-sm">
+                    <label for="cartDeliveryNotes" class="text-sm font-bold">Data, Horário & Local de Entrega *</label>
+                    <textarea id="cartDeliveryNotes" rows="2" placeholder="Ex: Entrega dia 20/08 às 15h no Bairro Matola Cimento..."></textarea>
+                </div>
+
+                <button onclick="sendOrderToWhatsApp()" class="btn btn-magenta w-full flex-center gap-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Finalizar Encomenda no WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/258845548352" class="floating-whatsapp" target="_blank" aria-label="WhatsApp Fino Sabor">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER COM LOGOTIPO -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="imagens/logo.jpeg" alt="Fino Sabor" class="footer-logo-img">
+                <span class="logo-text">FINO SABOR</span>
+                <span class="logo-sub font-gold">CATERING & PASTELARIA</span>
+                <p class="footer-tagline">Especialistas em serviços de catering e pastelaria artesanal na Matola, Moçambique.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#cardapio">Cardápio Digital</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#catering">Catering</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com/finosabormz_oficial" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/258845548352" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Fino Sabor. Todos os direitos reservados. Matola, Moçambique.</p>
+        </div>
+    </footer>
+
+    <!-- JS Principal -->
+    <script src="js/script.js"></script>
+</body>
+</html>
