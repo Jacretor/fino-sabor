@@ -49,6 +49,7 @@
                 
                 <nav class="hidden md:flex space-x-8 font-semibold text-sm text-gray-700">
                     <a href="#inicio" class="hover:text-magenta transition duration-200">Início</a>
+                    <a href="#menu-semanal" class="hover:text-magenta transition duration-200">Menú Semanal</a>
                     <a href="#promocoes" class="hover:text-magenta transition duration-200 text-magenta font-bold">Promoções</a>
                     <a href="#cardapio" class="hover:text-magenta transition duration-200">Cardápio</a>
                     <a href="#galeria" class="hover:text-magenta transition duration-200">Galeria</a>
@@ -75,16 +76,209 @@
                 <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">Fino Sabor</h1>
                 <p class="text-magenta-light text-lg sm:text-2xl font-medium italic">Sabor inigualável para os seus momentos especiais.</p>
                 <p class="text-white/90 text-xs sm:text-base leading-relaxed max-w-lg mx-auto md:mx-0">
-                    Bolos de aniversário, massas folhadas crocantes, salgados por dúzia e sobremesas deliciosas preparadas com todo carinho.
+                    Bolos de aniversário, massas folhadas crocantes, salgados por dúzia e pratos executivos diários preparados com todo carinho.
                 </p>
                 <div class="pt-3 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                    <a href="#cardapio" class="bg-white hover:bg-magenta-light text-magenta font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
-                        Ver Cardápio <i class="fa-solid fa-arrow-down"></i>
+                    <a href="#menu-semanal" class="bg-white hover:bg-magenta-light text-magenta font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-days"></i> Ver Menú Semanal
                     </a>
-                    <a href="#promocoes" class="bg-amber-400 hover:bg-amber-500 text-gray-900 font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-fire"></i> Ver Promoções
+                    <a href="#cardapio" class="bg-amber-400 hover:bg-amber-500 text-gray-900 font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
+                        Ver Cardápio Geral <i class="fa-solid fa-arrow-down"></i>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO MENÚ SEMANAL (SEM IMAGEM, ORGANIZADO E CLEAN) -->
+    <section id="menu-semanal" class="bg-white py-12 border-b border-magenta-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-2 mb-10">
+                <span class="bg-magenta text-white text-[10px] sm:text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm inline-block">
+                    <i class="fa-solid fa-utensils mr-1"></i> Pratos Executivos
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-magenta tracking-tight">Menú Semanal</h2>
+                <p class="text-gray-600 text-xs sm:text-sm">Escolha suas refeições de Segunda a Sexta-feira</p>
+                <div class="w-16 h-1 bg-magenta mx-auto rounded-full mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                
+                <!-- SEGUNDA -->
+                <div class="bg-magenta-light/40 rounded-2xl p-4 border border-magenta-soft flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="bg-magenta text-white text-center py-1.5 rounded-xl font-bold text-xs uppercase tracking-wider mb-3">
+                            Segunda-feira
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Bife de Galinha Grelhado</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ legumes ao vapor</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">285 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Bife de Galinha Grelhado c/ Legumes', 285, 'Segunda-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Caril de Carne</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz de alho e salada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">240 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Caril de Carne c/ Arroz de Alho', 240, 'Segunda-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="pb-1">
+                                <span class="text-xs font-bold text-gray-800 block">Camarão Grelhado</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz e salada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">350 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Camarão Grelhado c/ Arroz', 350, 'Segunda-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TERÇA -->
+                <div class="bg-magenta-light/40 rounded-2xl p-4 border border-magenta-soft flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="bg-magenta text-white text-center py-1.5 rounded-xl font-bold text-xs uppercase tracking-wider mb-3">
+                            Terça-feira
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Jardineira de Frango</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz de côco e salada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">220 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Jardineira de Frango c/ Arroz de Côco', 220, 'Terça-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Bife Grelhado</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz e feijão preto</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">350 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Bife Grelhado c/ Feijão Preto', 350, 'Terça-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="pb-1">
+                                <span class="text-xs font-bold text-gray-800 block">Bife Grelhado</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ purê de batata doce e salada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">380 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Bife Grelhado c/ Purê de Batata Doce', 380, 'Terça-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- QUARTA -->
+                <div class="bg-magenta-light/40 rounded-2xl p-4 border border-magenta-soft flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="bg-magenta text-white text-center py-1.5 rounded-xl font-bold text-xs uppercase tracking-wider mb-3">
+                            Quarta-feira
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Posta de Peixe Grelhado</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ legumes ao vapor</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">250 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Posta de Peixe Grelhado c/ Legumes', 250, 'Quarta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Massa Chinesa</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">de carne e camarão</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">350 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Massa Chinesa de Carne e Camarão', 350, 'Quarta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="pb-1">
+                                <span class="text-xs font-bold text-gray-800 block">Caril de Amendoim de Frango</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz e salada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">250 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Caril de Amendoim de Frango', 250, 'Quarta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- QUINTA -->
+                <div class="bg-magenta-light/40 rounded-2xl p-4 border border-magenta-soft flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="bg-magenta text-white text-center py-1.5 rounded-xl font-bold text-xs uppercase tracking-wider mb-3">
+                            Quinta-feira
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Carne Assada na Panela</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz e salada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">280 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Carne Assada na Panela', 280, 'Quinta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Caldeirada de Peixe</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz e salada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">280 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Caldeirada de Peixe c/ Arroz', 280, 'Quinta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="pb-1">
+                                <span class="text-xs font-bold text-gray-800 block">Frango Grelhado à Moda da Casa</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz e batata frita</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">250 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Frango Grelhado à Moda da Casa', 250, 'Quinta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SEXTA -->
+                <div class="bg-magenta-light/40 rounded-2xl p-4 border border-magenta-soft flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="bg-magenta text-white text-center py-1.5 rounded-xl font-bold text-xs uppercase tracking-wider mb-3">
+                            Sexta-feira
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Biryane de Frango</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">Especialidade temperada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">350 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Biryane de Frango', 350, 'Sexta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="border-b border-magenta-soft/60 pb-2">
+                                <span class="text-xs font-bold text-gray-800 block">Almôndegas de Carne</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">c/ arroz de espinafre e salada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">250 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Almôndegas de Carne c/ Arroz de Espinafre', 250, 'Sexta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                            <li class="pb-1">
+                                <span class="text-xs font-bold text-gray-800 block">Lassanha de Carne</span>
+                                <span class="text-[11px] text-gray-500 block mb-1">Massa artesanal recheada</span>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-extrabold text-magenta">350 Mzn</span>
+                                    <button onclick="adicionarPromoAoCarrinho('Lassanha de Carne', 350, 'Sexta-feira')" class="bg-magenta hover:bg-magenta-dark text-white px-2.5 py-1 rounded-lg text-[10px] font-bold transition">Pedir</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -101,10 +295,7 @@
                 <div class="w-16 h-1 bg-magenta mx-auto rounded-full mt-2"></div>
             </div>
 
-            <!-- GRID DE PROMOÇÕES -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="lista-promocoes">
-                
-                <!-- Promoção 1: Massa Folhada -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border-2 border-magenta transition-all duration-300 flex flex-col justify-between relative group transform hover:-translate-y-1">
                     <div class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider z-20 shadow-md flex items-center gap-1">
                         <i class="fa-solid fa-fire"></i> Destaque da Casa
@@ -112,32 +303,17 @@
                     <div>
                         <div class="relative overflow-hidden aspect-[16/9] bg-gray-100 group/img">
                             <img id="img-promo-1" src="imagens/massafolhada.jpeg" onerror="tratarErroImagem(this)" onclick="abrirZoom(this.src)" alt="Massa Folhada" class="w-full h-full object-cover img-fade cursor-zoom-in">
-                            
-                            <!-- Botões de Navegação -->
                             <button onclick="mudarFotoPromo(1, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </button>
                             <button onclick="mudarFotoPromo(1, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
                                 <i class="fa-solid fa-chevron-right"></i>
                             </button>
-
-                            <!-- Indicadores/Pontos -->
                             <div id="dots-promo-1" class="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-20"></div>
-
-                            <div onclick="abrirZoom(document.getElementById('img-promo-1').src)" class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center cursor-zoom-in z-10">
-                                <span class="bg-black/60 text-white text-xs px-3 py-1.5 rounded-full font-bold flex items-center gap-1.5">
-                                    <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para Ampliar
-                                </span>
-                            </div>
                         </div>
                         <div class="p-6 space-y-3">
                             <h3 class="text-xl font-bold text-gray-900 group-hover:text-magenta transition-colors">Massa Folhada</h3>
                             <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Salgados folhados levemente dourados, crocantes e artesanais com recheios irresistíveis.</p>
-                            <ul class="text-xs sm:text-sm text-gray-600 space-y-1.5 pt-1">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Massa folhada ultra leve e crocante</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Opções saborosas de frango ou carne</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Preparada na hora com qualidade garantida</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-2">
@@ -151,7 +327,6 @@
                     </div>
                 </div>
 
-                <!-- Promoção 2: Massa Folhada Torrada -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border-2 border-magenta/20 transition-all duration-300 flex flex-col justify-between relative group transform hover:-translate-y-1">
                     <div class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider z-20 shadow-md">
                         Crocância Extra
@@ -159,32 +334,17 @@
                     <div>
                         <div class="relative overflow-hidden aspect-[16/9] bg-gray-100 group/img">
                             <img id="img-promo-2" src="imagens/massafolhadatorada1.jpeg" onerror="tratarErroImagem(this)" onclick="abrirZoom(this.src)" alt="Massa Folhada Torrada" class="w-full h-full object-cover img-fade cursor-zoom-in">
-                            
-                            <!-- Botões de Navegação -->
                             <button onclick="mudarFotoPromo(2, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </button>
                             <button onclick="mudarFotoPromo(2, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-magenta text-white w-8 h-8 rounded-full flex items-center justify-center text-xs z-20 transition shadow-md">
                                 <i class="fa-solid fa-chevron-right"></i>
                             </button>
-
-                            <!-- Indicadores/Pontos -->
                             <div id="dots-promo-2" class="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-20"></div>
-
-                            <div onclick="abrirZoom(document.getElementById('img-promo-2').src)" class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center cursor-zoom-in z-10">
-                                <span class="bg-black/60 text-white text-xs px-3 py-1.5 rounded-full font-bold flex items-center gap-1.5">
-                                    <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para Ampliar
-                                </span>
-                            </div>
                         </div>
                         <div class="p-6 space-y-3">
                             <h3 class="text-xl font-bold text-gray-900 group-hover:text-magenta transition-colors">Massa Folhada Torrada</h3>
                             <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Assada no ponto perfeito com acabamento bem torrado e dourado para extra crocância.</p>
-                            <ul class="text-xs sm:text-sm text-gray-600 space-y-1.5 pt-1">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Ponto bem torrado exclusivo</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Recheio suculento e bem temperado</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Ideal para aperitivos e lanches rápidos</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-2">
@@ -197,7 +357,6 @@
                         </button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -205,20 +364,18 @@
     <!-- CARDÁPIO SECTION -->
     <section id="cardapio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="text-center space-y-2 mb-8">
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-magenta tracking-tight">Nosso Cardápio</h2>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-magenta tracking-tight">Nosso Cardápio Geral</h2>
             <p class="text-gray-500 text-xs sm:text-sm">Escolha seus produtos e personalize os tamanhos e recheios</p>
             <div class="w-16 h-1 bg-magenta mx-auto rounded-full mt-2"></div>
         </div>
 
-        <!-- BARRA DE BUSCA -->
         <div class="max-w-lg mx-auto mb-6">
             <div class="relative flex items-center bg-white shadow-sm border border-gray-200 rounded-2xl overflow-hidden focus-within:border-magenta focus-within:ring-2 focus-within:ring-magenta/20 transition-all">
                 <span class="pl-4 text-gray-400"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" id="campo-busca" oninput="filtrarProdutos()" placeholder="Buscar bolo, massa folhada, chamusca..." class="w-full pl-3 pr-4 py-3 text-sm bg-transparent outline-none text-gray-700">
+                <input type="text" id="campo-busca" oninput="filtrarProdutos()" placeholder="Buscar bolo, massa folhada, caril..." class="w-full pl-3 pr-4 py-3 text-sm bg-transparent outline-none text-gray-700">
             </div>
         </div>
 
-        <!-- ABAS DE CATEGORIAS -->
         <div class="w-full border-b border-gray-200 mb-8 overflow-hidden">
             <div class="flex space-x-2 overflow-x-auto pb-3 scroll-clean justify-start md:justify-center" id="container-categorias">
                 <button onclick="filtrarCategoria('todos', this)" class="btn-cat shrink-0 px-4 py-2 rounded-xl font-bold bg-magenta text-white text-xs sm:text-sm transition shadow-sm">Todos</button>
@@ -228,7 +385,6 @@
             </div>
         </div>
 
-        <!-- GRID DE PRODUTOS -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="lista-produtos"></div>
     </section>
 
@@ -451,24 +607,20 @@
         </div>
     </div>
 
-    <!-- BARRA DE MENU FLUTUANTE (MOBILE NAVIGATION BAR - COMPACTA) -->
+    <!-- BARRA DE MENU FLUTUANTE (MOBILE NAVIGATION BAR) -->
     <nav class="fixed bottom-3 left-4 right-4 z-40 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl border border-magenta-soft p-1.5 md:hidden">
         <div class="flex justify-around items-center">
             <a href="#inicio" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
                 <i class="fa-solid fa-house text-base"></i>
                 <span class="text-[10px] font-semibold mt-0.5">Início</span>
             </a>
-            <a href="#promocoes" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
-                <i class="fa-solid fa-fire text-base text-amber-500"></i>
-                <span class="text-[10px] font-semibold mt-0.5">Ofertas</span>
+            <a href="#menu-semanal" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
+                <i class="fa-solid fa-calendar-days text-base text-magenta"></i>
+                <span class="text-[10px] font-semibold mt-0.5">Menú</span>
             </a>
             <a href="#cardapio" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
                 <i class="fa-solid fa-utensils text-base"></i>
                 <span class="text-[10px] font-semibold mt-0.5">Cardápio</span>
-            </a>
-            <a href="#calculadora" class="flex flex-col items-center py-1 px-2 text-gray-600 hover:text-magenta transition text-center">
-                <i class="fa-solid fa-calculator text-base"></i>
-                <span class="text-[10px] font-semibold mt-0.5">Calcular</span>
             </a>
             <button onclick="toggleCarrinho()" class="relative flex flex-col items-center py-1 px-2 text-magenta font-bold transition text-center">
                 <i class="fa-solid fa-basket-shopping text-base"></i>
@@ -486,7 +638,7 @@
                     <img src="imagens/logo.jpeg" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x150/e20074/FFFFFF?text=Fino+Sabor';" alt="Fino Sabor Logo Rodapé" class="h-12 w-auto object-contain bg-white rounded-full p-1 border border-magenta-soft">
                     <h3 class="text-2xl font-extrabold tracking-wide text-white uppercase">Fino Sabor</h3>
                 </div>
-                <p class="text-magenta-light text-xs sm:text-sm leading-relaxed">Doces, salgados e sobremesas especiais preparadas para tornar suas comemorações inesquecíveis.</p>
+                <p class="text-magenta-light text-xs sm:text-sm leading-relaxed">Doces, salgados e refeições especiais preparadas para tornar suas comemorações e dias inesquecíveis.</p>
             </div>
             
             <div class="space-y-3">
@@ -522,16 +674,9 @@
 
         const IMG_FALLBACK = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&auto=format&fit=crop";
 
-        // ADICIONE AQUI MAIS FOTOS PARA OS CARDS DA SEÇÃO DE PROMOÇÃO:
         const fotosPromocoes = {
-            1: [
-                "imagens/massafolhada.jpeg",
-            ],
-            2: [
-                "imagens/massafolhadatorada1.jpeg",
-                "imagens/massafolhadatorada2.jpeg",
-                "imagens/massafolhadatorada3.jpeg"
-            ]
+            1: ["imagens/massafolhada.jpeg"],
+            2: ["imagens/massafolhadatorada1.jpeg", "imagens/massafolhadatorada2.jpeg", "imagens/massafolhadatorada3.jpeg"]
         };
 
         let indicesPromo = { 1: 0, 2: 0 };
@@ -550,7 +695,6 @@
             imgElement.src = IMG_FALLBACK;
         }
 
-        // ZOOM / LIGHTBOX
         function abrirZoom(src) {
             const modal = document.getElementById('modalZoom');
             const img = document.getElementById('imgModalZoom');
@@ -562,7 +706,6 @@
             document.getElementById('modalZoom').classList.add('hidden');
         }
 
-        // CARROSSEL DAS PROMOÇÕES
         function mudarFotoPromo(promoId, direcao) {
             const fotos = fotosPromocoes[promoId];
             if (!fotos || fotos.length === 0) return;
@@ -700,7 +843,7 @@
             const itemPromo = {
                 idCart: Date.now(),
                 id: 999,
-                nome: `🔥 PROMO: ${nomePromo}`,
+                nome: `🍲 ${nomePromo}`,
                 detalhes: detalhes,
                 preco: preco,
                 qtd: 1
@@ -721,7 +864,7 @@
 
             if (produto.opcoes && (produto.opcoes.tamanhos || produto.opcoes.recheios)) {
                 const listaOpcoesPreco = produto.opcoes.tamanhos || produto.opcoes.recheios;
-                const tituloGrupo = produto.opcoes.tamanhos ? "Escolha a Forma / Tamanho:" : "Escolha a Opção / Recheio:";
+                const tituloGrupo = produto.opcoes.tamanhos ? "Escolha a Opção / Prato:" : "Escolha a Opção / Recheio:";
                 
                 let htmlGrupo = `<div class="space-y-2">
                     <label class="block text-xs font-bold text-magenta uppercase tracking-wider">${tituloGrupo}</label>
@@ -746,32 +889,10 @@
                 corpo.innerHTML += htmlGrupo;
             }
 
-            if (produto.opcoes && produto.opcoes.sabores && produto.opcoes.tamanhos) {
-                let htmlSabores = `<div class="space-y-2 pt-1">
-                    <label class="block text-xs font-bold text-magenta uppercase tracking-wider">Sabor Desejado:</label>
-                    <select id="selectSaborSecundario" class="w-full p-3 border border-gray-200 rounded-xl bg-white text-xs sm:text-sm focus:outline-none focus:border-magenta">`;
-                produto.opcoes.sabores.forEach(sabor => {
-                    htmlSabores += `<option value="${sabor}">${sabor}</option>`;
-                });
-                htmlSabores += `</select></div>`;
-                corpo.innerHTML += htmlSabores;
-            }
-
-            if (produto.opcoes && produto.opcoes.cores) {
-                let htmlCores = `<div class="space-y-2 pt-1">
-                    <label class="block text-xs font-bold text-magenta uppercase tracking-wider">Cor das Rosas:</label>
-                    <select id="selectCorSecundaria" class="w-full p-3 border border-gray-200 rounded-xl bg-white text-xs sm:text-sm focus:outline-none focus:border-magenta">`;
-                produto.opcoes.cores.forEach(cor => {
-                    htmlCores += `<option value="${cor}">${cor}</option>`;
-                });
-                htmlCores += `</select></div>`;
-                corpo.innerHTML += htmlCores;
-            }
-
             corpo.innerHTML += `
                 <div class="space-y-2 pt-1">
                     <label class="block text-xs font-bold text-magenta uppercase tracking-wider">Observações / Detalhes do Pedido:</label>
-                    <textarea id="obsProduto" rows="2" placeholder="Ex: Escrever 'Feliz Aniversário'..." class="w-full p-3 border border-gray-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-magenta"></textarea>
+                    <textarea id="obsProduto" rows="2" placeholder="Ex: Sem cebola, extra pimenta..." class="w-full p-3 border border-gray-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-magenta"></textarea>
                 </div>
             `;
 
@@ -795,14 +916,10 @@
 
         function confirmarAdicaoCarrinho() {
             const radioSelecionado = document.querySelector('input[name="opcaoPrincipal"]:checked');
-            const selectSabor = document.getElementById('selectSaborSecundario');
-            const selectCor = document.getElementById('selectCorSecundaria');
             const obs = document.getElementById('obsProduto').value.trim();
 
             let detalhes = [];
             if (radioSelecionado) detalhes.push(radioSelecionado.value);
-            if (selectSabor) detalhes.push(`Sabor: ${selectSabor.value}`);
-            if (selectCor) detalhes.push(`Cor: ${selectCor.value}`);
             if (obs) detalhes.push(`Obs: ${obs}`);
 
             const itemParaCarrinho = {
