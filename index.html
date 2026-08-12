@@ -581,7 +581,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO EXCLUSIVA DE CONTACTO -->
+    <!-- SEÇÃO EXCLUSIVA DE CONTACTO & PAGAMENTO -->
     <section id="contacto-secao" class="bg-gradient-to-b from-white to-magenta-light/50 py-12 border-t border-magenta-soft">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center space-y-2 mb-10">
@@ -589,11 +589,11 @@
                     <i class="fa-solid fa-paper-plane mr-1"></i> Fala Connosco
                 </span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-magenta tracking-tight">Entre em Contacto</h2>
-                <p class="text-gray-600 text-xs sm:text-sm">Estamos prontos para atendeu-lo. Envie uma mensagem ou visite-nos</p>
+                <p class="text-gray-600 text-xs sm:text-sm">Estamos prontos para atendê-lo. Envie uma mensagem ou visite-nos</p>
                 <div class="w-16 h-1 bg-magenta mx-auto rounded-full mt-2"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-8">
                 <!-- TELEFONE / WHATSAPP -->
                 <div class="bg-white p-6 rounded-2xl border border-magenta-soft shadow-sm hover:shadow-md transition text-center space-y-3">
                     <div class="w-12 h-12 bg-magenta-light rounded-full flex items-center justify-center mx-auto text-magenta text-xl">
@@ -604,6 +604,19 @@
                     <a href="https://wa.me/258845548352" target="_blank" class="inline-block font-extrabold text-magenta hover:text-magenta-dark text-sm tracking-wide">
                         +258 84 554 8352
                     </a>
+                </div>
+
+                <!-- PAGAMENTO M-PESA -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-magenta rounded-2xl shadow-sm hover:shadow-md transition text-center space-y-3">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto text-red-600 text-xl font-black">
+                        M
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-base">Método de Pagamento</h3>
+                    <p class="text-xs text-gray-500">M-Pesa para confirmação das encomendas</p>
+                    <div class="bg-magenta-light p-2 rounded-xl text-xs space-y-1">
+                        <p class="font-extrabold text-magenta text-sm">845548352</p>
+                        <p class="font-bold text-gray-700">Nome: Nissia</p>
+                    </div>
                 </div>
 
                 <!-- LOCALIZAÇÃO -->
@@ -677,6 +690,12 @@
             <div class="p-4 sm:p-5 overflow-y-auto flex-1 space-y-3" id="itens-carrinho"></div>
 
             <div class="p-4 sm:p-5 border-t border-gray-100 bg-gray-50 space-y-4">
+                <!-- INFORMAÇÃO DE PAGAMENTO DENTRO DO CARRINHO -->
+                <div class="bg-magenta-light/60 p-3 rounded-xl border border-magenta-soft text-xs space-y-1">
+                    <span class="block font-bold text-magenta uppercase tracking-wider">💳 Método de Pagamento (M-Pesa):</span>
+                    <p class="text-gray-700"><strong>Número:</strong> 845548352 | <strong>Nome:</strong> Nissia</p>
+                </div>
+
                 <div class="bg-white p-3 rounded-xl border border-gray-200 space-y-2">
                     <span class="block text-xs font-bold text-magenta uppercase tracking-wider">Forma de Entrega:</span>
                     <div class="grid grid-cols-2 gap-2 text-xs">
@@ -765,6 +784,7 @@
                 <h4 class="text-xs font-bold uppercase text-white tracking-wider">Contactos & Localização</h4>
                 <p class="text-magenta-light text-xs sm:text-sm"><i class="fa-solid fa-location-dot mr-2"></i> Matola, por trás da Novare</p>
                 <p class="text-magenta-light text-xs sm:text-sm"><i class="fa-solid fa-phone mr-2"></i> +258 84 554 8352</p>
+                <p class="text-magenta-light text-xs sm:text-sm"><i class="fa-solid fa-credit-card mr-2"></i> M-Pesa: 845548352 (Nissia)</p>
             </div>
 
             <div class="space-y-3">
@@ -1177,6 +1197,9 @@
 
             const totalFinal = subtotal + taxaDelivery;
             mensagem += `💰 *Total a Pagar:* ${totalFinal.toLocaleString('pt-MZ')} MZN\n\n`;
+            mensagem += `💳 *Método de Pagamento:* M-Pesa\n`;
+            mensagem += `• *Número:* 845548352\n`;
+            mensagem += `• *Nome:* Nissia\n\n`;
             mensagem += `Por favor, confirmem a disponibilidade do pedido. Obrigado!`;
 
             window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`, '_blank');
@@ -1214,6 +1237,7 @@
             msg += `📌 *Estimativa Gerada:*\n`;
             msg += `• *Salgados:* ${ultimoCalculoEvento.salgadosDuzias} dúzias\n`;
             msg += `• *Bolo:* ${ultimoCalculoEvento.boloSugerido}\n\n`;
+            msg += `💳 *Pagamento via M-Pesa:* 845548352 (Nissia)\n\n`;
             msg += `Gostaria de verificar disponibilidade!`;
 
             window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, '_blank');
