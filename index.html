@@ -69,22 +69,30 @@
     <!-- HERO SECTION -->
     <section id="inicio" class="relative text-white min-h-[60vh] flex items-center overflow-hidden bg-gradient-to-r from-magenta to-magenta-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20 py-12 md:py-20">
-            <div class="max-w-2xl space-y-5 text-center md:text-left">
-                <div class="inline-flex items-center gap-2 bg-white/20 text-white border border-white/30 px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase backdrop-blur-sm">
-                    <i class="fa-solid fa-star text-amber-300"></i> Confeitaria & Salgados
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-5 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/20 text-white border border-white/30 px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase backdrop-blur-sm">
+                        <i class="fa-solid fa-star text-amber-300"></i> Confeitaria & Salgados
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">Fino Sabor</h1>
+                    <p class="text-magenta-light text-lg sm:text-2xl font-medium italic">Sabor inigualável para os seus momentos especiais.</p>
+                    <p class="text-white/90 text-xs sm:text-base leading-relaxed max-w-lg mx-auto md:mx-0">
+                        Bolos de aniversário, massas folhadas crocantes, salgados por dúzia e pratos executivos diários preparados com todo carinho.
+                    </p>
+                    <div class="pt-3 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                        <a href="#promocoes" class="bg-white hover:bg-magenta-light text-magenta font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-fire"></i> Ver Promoções
+                        </a>
+                        <a href="#cardapio" class="bg-amber-400 hover:bg-amber-500 text-gray-900 font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
+                            Ver Cardápio Geral <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
                 </div>
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">Fino Sabor</h1>
-                <p class="text-magenta-light text-lg sm:text-2xl font-medium italic">Sabor inigualável para os seus momentos especiais.</p>
-                <p class="text-white/90 text-xs sm:text-base leading-relaxed max-w-lg mx-auto md:mx-0">
-                    Bolos de aniversário, massas folhadas crocantes, salgados por dúzia e pratos executivos diários preparados com todo carinho.
-                </p>
-                <div class="pt-3 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                    <a href="#promocoes" class="bg-white hover:bg-magenta-light text-magenta font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-fire"></i> Ver Promoções
-                    </a>
-                    <a href="#cardapio" class="bg-amber-400 hover:bg-amber-500 text-gray-900 font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-300 text-center uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
-                        Ver Cardápio Geral <i class="fa-solid fa-arrow-down"></i>
-                    </a>
+                <!-- IMAGEM DA HERO SECTION -->
+                <div class="flex justify-center md:justify-end">
+                    <div class="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 group">
+                        <img src="imagens/img.jpeg" onerror="tratarErroImagem(this)" onclick="abrirZoom(this.src)" alt="Especiais Fino Sabor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 cursor-zoom-in">
+                    </div>
                 </div>
             </div>
         </div>
@@ -401,6 +409,7 @@
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                
                 <div onclick="abrirZoom('imagens/mesasalgados2.jpeg')" class="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group shadow-sm hover:shadow-lg transition cursor-pointer">
                     <img src="imagens/mesasalgados2.jpeg" onerror="tratarErroImagem(this)" alt="Galeria Fino Sabor 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-magenta/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -500,6 +509,12 @@
                 </div>
                 <div onclick="abrirZoom('imagens/boloaniver8.jpeg')" class="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group shadow-sm hover:shadow-lg transition cursor-pointer">
                     <img src="imagens/boloaniver8.jpeg" onerror="tratarErroImagem(this)" alt="Feedback do Cliente - Fino Sabor" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-magenta/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                <div onclick="abrirZoom('imagens/img.jpeg')" class="relative overflow-hidden rounded-2xl aspect-square bg-gray-100 group shadow-sm hover:shadow-lg transition cursor-pointer">
+                    <img src="imagens/img.jpeg" onerror="tratarErroImagem(this)" alt="Feedback do Cliente - Fino Sabor" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-magenta/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                         <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
                     </div>
